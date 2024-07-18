@@ -81,9 +81,19 @@ title, content, featuredImage, status,
         await this.bucket.deleteFile(conf.appwriteBucketId,
             fileId
         )
+        return true;
     }
 
 
+   //file preview
+
+   getFilePreview(fileId){
+    return this.bucket.getFilePreview(conf.appwriteBucketId
+        ,fileId
+    )
+   }
+
+ 
 
 }
  const service = new Service()
