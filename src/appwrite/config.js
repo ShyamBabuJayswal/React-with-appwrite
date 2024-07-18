@@ -68,6 +68,10 @@ title, content, featuredImage, status,
 
     // file upload service
     async uploadFile(file){
+      return await this.bucket.createFile(conf.appwriteBucketId,
+        ID.unique(),
+        file
+      )
         
     }
 
