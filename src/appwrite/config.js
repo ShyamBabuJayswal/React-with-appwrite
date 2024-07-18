@@ -75,6 +75,14 @@ title, content, featuredImage, status,
         
     }
 
+    //file delete service
+
+    async deletefile(fileId){
+        await this.bucket.deleteFile(conf.appwriteBucketId,
+            fileId
+        )
+    }
+
 
 
 }
