@@ -12,7 +12,7 @@ function App() {
 
   const dispatch = useDispatch();
 
-  useEffect(()  => {
+  useEffect(()=> {
     authService.getCurrentUser()
     .then((userData) => {
       if(userData){
